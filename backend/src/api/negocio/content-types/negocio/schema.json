@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "negocios",
+  "info": {
+    "singularName": "negocio",
+    "pluralName": "negocios",
+    "displayName": "Negocio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "categoriaPrincipal": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria.categoria"
+    },
+    "categoriaSecundaria": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria.categoria"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "whatsapp": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "latitud": {
+      "type": "decimal"
+    },
+    "longitud": {
+      "type": "decimal"
+    },
+    "horario": {
+      "type": "text"
+    },
+    "servicioDomicilio": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "fotos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "enlace": {
+      "type": "string"
+    },
+    "consentimientoEstado": {
+      "type": "enumeration",
+      "enum": [
+        "pendiente",
+        "otorgado",
+        "revocado"
+      ],
+      "default": "pendiente",
+      "required": true
+    },
+    "consentimientoFecha": {
+      "type": "date"
+    },
+    "consentimientoFolio": {
+      "type": "string"
+    }
+  }
+}

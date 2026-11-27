@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "avisos_parroquiales",
+  "info": {
+    "singularName": "aviso-parroquial",
+    "pluralName": "avisos-parroquiales",
+    "displayName": "Aviso parroquial"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": [
+        "horario",
+        "boda",
+        "defuncion",
+        "comunicado"
+      ],
+      "required": true
+    },
+    "contenido": {
+      "type": "text"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "fechaEvento": {
+      "type": "datetime"
+    },
+    "lugar": {
+      "type": "string"
+    },
+    "fechaCaducidad": {
+      "type": "datetime"
+    },
+    "autorizadoParroquia": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "metricas_diarias",
+  "info": {
+    "singularName": "metrica-diaria",
+    "pluralName": "metricas-diarias",
+    "displayName": "Métrica diaria"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fecha": {
+      "type": "date",
+      "required": true
+    },
+    "entidad": {
+      "type": "enumeration",
+      "enum": [
+        "negocio",
+        "noticia"
+      ],
+      "required": true
+    },
+    "entidadId": {
+      "type": "string",
+      "required": true
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": [
+        "vista",
+        "llamada",
+        "whatsapp",
+        "mapa"
+      ],
+      "required": true
+    },
+    "conteo": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  }
+}
